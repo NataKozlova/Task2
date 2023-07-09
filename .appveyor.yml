@@ -14,4 +14,4 @@ install:
   - java -jar ./artifacts/app-ibank.jar -P:profile=test &
 
 build_script:
-  - ./gradlew test --info -Dselenide.headless=true  # запускаем тест, флаг --info позволяет выводить больше информации
+  - ./gradlew test --info -Dselenide.headless=false  # запускаем тест, флаг --info позволяет выводить больше информации

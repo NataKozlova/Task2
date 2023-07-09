@@ -31,7 +31,7 @@ public class TestInput {
             .build();
 
     @Test
-    void shouldSomethingCheck() {
+    void shouldCheckRegisteredUser() {
         var registeredUser = DataGenerator.Registration.getRegisteredUser("active");
         $(By.cssSelector("[data-test-id='login'] input")).setValue(registeredUser.getLogin());
         $(By.cssSelector("[data-test-id='password'] input")).setValue(registeredUser.getPassword());
@@ -40,7 +40,7 @@ public class TestInput {
     }
 
     @Test
-    void shouldCheckNotRegistrationUser() {
+    void shouldCheckNotRegisteredUser() {
         open("http://localhost:9999");
         var notRegisteredUser = DataGenerator.Registration.getUser("active");
         $(By.cssSelector("[data-test-id='login'] input")).setValue(notRegisteredUser.getLogin());
