@@ -31,5 +31,5 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    //sistemProperty 'selenide.headless',System.getProperty('selenide.headless')
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
 }
